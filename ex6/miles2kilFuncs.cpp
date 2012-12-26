@@ -22,16 +22,11 @@ void calcKil(int miles, double yards, int& kilo, double& metres)
   totYards = yards + (miles / 0.0006);
   totMet = totYards * 0.9144;
   
-  if (totMet >= 0)
-    {
-      kilo = static_cast<int>(totMet / 1000);
-      metres = fmod(totMet, 1000);
-    }
-  else 
-    {
-      kilo = 0;
-      metres = totMet;
-    }
+  kilo = 0;
+
+  kilo = static_cast<int>(totMet / 1000);
+  metres = fmod(totMet, 1000);
+
 }
 //END OF FUNCTION DEFINITION
 
